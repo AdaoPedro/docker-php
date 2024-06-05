@@ -53,3 +53,6 @@ COPY ./php/conf.d/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 # Install xdebug
 RUN set -eux; \
 	install-php-extensions xdebug
+
+# Install PHPStan as a dev dep
+RUN composer require --dev phpstan/phpstan

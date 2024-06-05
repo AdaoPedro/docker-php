@@ -17,7 +17,8 @@
         "predis/predis": "^2.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5",
+        "phpstan/phpstan": "^1.11"
     },
     "autoload": {
         "psr-4": {
@@ -25,6 +26,7 @@
         }
     },
     "scripts": {
-        "run-phpunit": "vendor/bin/phpunit"
+        "run-phpunit": "vendor/bin/phpunit",
+        "run-phpstan": "vendor/bin/phpstan analyse -l max public/index.php src"
     }
 }
